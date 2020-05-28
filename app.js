@@ -39,7 +39,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-http.listen(porta,(err)=>{
-	if(err) throw err;
-	console.log('Programa iniciado');
-})
+http.listen(process.env.PORT || porta)
